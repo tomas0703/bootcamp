@@ -11,7 +11,7 @@ def getlat(place):
     else:
         raise ValueError(f'{place} doese not exist')
 
-def main(place: str):
+def gettemp(place: str):
     BASE_URL = "https://api.open-meteo.com/v1/forecast"
     om = openmeteo_requests.Client()
     hourly = "temperature_2m"
