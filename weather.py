@@ -1,7 +1,7 @@
 import openmeteo_requests
 from geopy.geocoders import Nominatim
 
-def getlat(place):
+def getlat(place: str):
     geolocator = Nominatim(user_agent="goofygobers12345")
     location = geolocator.geocode(place)
     if location:

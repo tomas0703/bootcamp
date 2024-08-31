@@ -12,7 +12,6 @@ def alter(text : str, s: int) -> str:
         else:
             base = 97
             result += chr((ord(char) + s - 97) % 26 + 97)
-        result += chr((ord(char) + s - base)% 26 + base)
     return result
 
 if __name__ == '__main__':
@@ -29,4 +28,4 @@ if __name__ == '__main__':
         s = -4
         print ("Cipher  : " + text)
         print ("Shift : " + str(s))
-        print ("Text : " + remove_duplicates(alter(text,s)))
+        print ("Text : " + alter(text,s))
